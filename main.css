@@ -1,0 +1,73 @@
+#navbar{
+    height:100px;
+    background:linear-gradient(to right, rgb(9, 115, 9), rgb(222, 10, 10));
+    text-decoration:none;
+}
+
+.options{
+    color:antiquewhite;
+    text-decoration:none;
+    margin-left:140px;
+    font-size: x-large;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+#h1{
+    font-family:fantasy;
+    margin-left:560px;
+    font-size: 40px;
+}
+
+#footer{
+    height:250px;
+    background:linear-gradient(to right, rgb(198, 3, 3), rgb(6, 99, 6));
+    margin-top:200px;
+}
+
+#name{
+    font-style:italic;
+    font-family: fantasy;
+    margin-left:600px;
+    color:rgb(253, 236, 215)
+}
+
+.address{
+    color:rgb(253, 236, 215);
+    margin-left:580px;
+    justify-items: center;
+}
+
+#button{
+    color:aquamarine;
+    background-color: brown;
+    height:50px;
+    width:150px;
+    font-size: larger;
+    font-weight:1000;
+    margin-left: 675px;
+    margin-top:400px;
+
+    
+}
+
+#gif1{
+    size:20px;
+}
+
+#gif2{
+    size:20px;
+}
+
+#gif3{
+    height:180px;
+}
+
+.gif{
+    display: inline-block;
+    
+}
+
+#gif_section{
+    margin-left:500px;
+}

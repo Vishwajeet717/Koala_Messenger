@@ -1,0 +1,77 @@
+.user-select{
+  background: springgreen;
+  font-family: fantasy;
+  height: 50px;;
+  width: 130px;
+  margin-left: 400px;
+  font-size: x-large;
+}
+.user-select.active{
+  border: 2px solid yellow;   /* outline to show it’s selected */
+  opacity: 0.4;               /* make it look pressed */
+}
+
+
+
+
+
+#chat-box{
+    height:600px;
+    background-color:transparent;
+    color:aliceblue;
+}
+
+
+textarea {
+  width: 800px;  
+  height: 50px;   
+  font-size: 17px; 
+  margin-left:350px;
+  margin-top:10px;
+  border-radius: 20px;
+  
+}
+
+#send{
+  border-color: chocolate;
+  color:white;
+  background-color: chocolate;
+  height:40px;
+  width:70px;
+  font-weight: bolder;
+  
+}
+
+.chat-bubble {
+  background-color: #909090;   /* green bubble */
+  color: rgb(0, 0, 0);                /* text color */
+  padding: 10px 15px;          /* space inside bubble */
+  margin-left: 80px;                 /* space between messages */
+  border-radius: 15px;         /* rounded corners */
+  max-width: 40%;              /* bubble doesn’t stretch full width */
+  word-wrap: break-word;       /* breaks long words to fit */
+  font-weight:bolder;
+  margin-top:20px;
+  overflow-y:auto;
+  font-size: larger;
+  font-family:sans-serif;
+}
+
+
+.chat-bubble2 {
+  background-color: #bbab01;   /* green bubble */
+  color: rgb(255, 255, 255);                /* text color */
+  padding: 10px 15px;          /* space inside bubble */
+  margin-left: 780px;                 /* space between messages */
+  border-radius: 15px;         /* rounded corners */
+  max-width: 40%;              /* bubble doesn’t stretch full width */
+  word-wrap: break-word;       /* breaks long words to fit */
+  font-weight:bolder;
+  margin-top:20px;
+  overflow-y:auto;
+  font-size:larger;
+  font-family: sans-serif;
+  
+}
+
+
