@@ -7,40 +7,40 @@ const { Server } = require("socket.io");
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
-const PORT = process.env.PORT || 3000;
 
+// IMPORTANT for Render
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.static(__dirname));
 
+// Serve main page
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "main.html"));
+});
+
 const messagesFile = path.join(__dirname, "messages.json");
 
-// Make sure the messages file exists
 if (!fs.existsSync(messagesFile)) {
   fs.writeFileSync(messagesFile, JSON.stringify([]));
 }
 
-// Serve old messages when someone connects
 io.on("connection", (socket) => {
   console.log("User connected:", socket.id);
 
-  // Send old messages
   const messages = JSON.parse(fs.readFileSync(messagesFile, "utf8"));
   socket.emit("loadMessages", messages);
 
-  // Listen for new messages
   socket.on("sendMessage", (data) => {
     let messages = JSON.parse(fs.readFileSync(messagesFile, "utf8"));
     messages.push(data);
 
-    // Keep only last 5
     if (messages.length > 5) {
       messages = messages.slice(messages.length - 5);
     }
 
     fs.writeFileSync(messagesFile, JSON.stringify(messages, null, 2));
 
-    // Broadcast new message to everyone
     io.emit("newMessage", data);
   });
 
@@ -52,4 +52,3 @@ io.on("connection", (socket) => {
 server.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
-
